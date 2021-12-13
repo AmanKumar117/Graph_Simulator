@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container-xxl">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-white">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light">
         <div class="container-fluid text-dark">
           <a class="navbar-brand text-black" href="#">Tree Traversal Visualization</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -82,8 +82,9 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-        <p></p>
-        <div class="container-fluid">
+    </div>
+    </div>
+        <div class="container-fluid p-5 bg-light">
           <h1>Binary Search tree</h1>
           <p>In this article, we will discuss the Binary search tree.</p>
           <p>Before moving directly to the binary search tree, let's first see a brief description of the tree.</p>
@@ -97,7 +98,7 @@
           <p>Similarly, we can see the left child of root node is greater than its left child and smaller than its right child. So, it also satisfies the property of binary search tree. Therefore, we can say that the tree in the above image is a binary search tree.</p>
           <p></p>  
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid p-5 bg-light">
           <h1>AVL Tree</h1>
           <p>AVL Tree is invented by GM Adelson - Velsky and EM Landis in 1962. The tree is named AVL in honour of its inventors.</p>
           <p>AVL Tree can be defined as height balanced binary search tree in which each node is associated with a balance factor which is calculated by subtracting the height of its right sub-tree from that of its left sub-tree.</p>
@@ -121,7 +122,7 @@
           <p>Where node A is the node whose balance Factor is other than -1, 0, 1.</p>
           <p>The first two rotations LL and RR are single rotations and the next two rotations LR and RL are double rotations. For a tree to be unbalanced, minimum height must be at least 2, Let us understand each rotation</p>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid p-5 bg-light">
           <h1>Red-Black Tree</h1>
           <p>Red black tree is a self-balancing binary tree where each node has an extra bit and that bit is often interpreted as color red or black. The colors ensure that the tree remains balanced during both deletions and insertions. </p>
           <p>The average searching time of red-black tree is O(log n), where n is total number of elements in the tree.</p>
@@ -136,8 +137,31 @@
           <p>A red-black tree is preferred when the application requires frequent insertions and deletions, as it causes less rotations in insertion and deletion as compared to other trees.</p>
           <img src="./images/rbt.png" class="img-fluid" alt="...">
         </div>
-    </div>
-    </div>
+        <div class="container-fluid p-5 bg-light">
+          <h1>Graphs in Data Structures</h1>
+          <p>A Graph is a non-linear data structure consisting of nodes and edges. The nodes are sometimes also referred to as vertices and the edges are lines or arcs that connect any two nodes in the graph. More formally a Graph can be defined as,</p>
+          <p>A Graph consists of a finite set of vertices(or nodes) and set of Edges which connect a pair of nodes.</p>
+          <img src="https://www.geeksforgeeks.org/wp-content/uploads/undirectedgraph.png" class="img-fluid" alt="https://www.geeksforgeeks.org/wp-content/uploads/undirectedgraph.png">
+          <p>In the above Graph, the set of vertices V = {0,1,2,3,4} and the set of edges E = {01, 12, 23, 34, 04, 14, 13}.</p>
+          <p>Graphs are used to solve many real-life problems. Graphs are used to represent networks. The networks may include paths in a city or telephone network or circuit network. Graphs are also used in social networks like linkedIn, Facebook. For example, in Facebook, each person is represented with a vertex(or node). Each node is a structure and contains information like person id, name, gender, locale etc.</p>
+          <h3>Breadth First Search or BFS for a Graph</h3>
+          <p>Breadth-First Traversal (or Search) for a graph is similar to Breadth-First Traversal of a tree (See method 2 of this post). The only catch here is, unlike trees, graphs may contain cycles, so we may come to the same node again. To avoid processing a node more than once, we use a boolean visited array. For simplicity, it is assumed that all vertices are reachable from the starting vertex. </p>
+          <p>For example, in the following graph, we start traversal from vertex 2. When we come to vertex 0, we look for all adjacent vertices of it. 2 is also an adjacent vertex of 0. If we don’t mark visited vertices, then 2 will be processed again and it will become a non-terminating process. A Breadth-First Traversal of the following graph is 2, 0, 3, 1.</p>
+          <img src="./images/g3.png" class="img-fluid" alt="...">
+          <h3>Depth First Search or DFS for a Graph</h3>
+          <p>Depth First Traversal (or Search) for a graph is similar to Depth First Traversal of a tree. The only catch here is, unlike trees, graphs may contain cycles (a node may be visited twice). To avoid processing a node more than once, use a boolean visited array. </p>
+          <h5>Approach:</h5>
+          <p>Depth-first search is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking. So the basic idea is to start from the root or any arbitrary node and mark the node and move to the adjacent unmarked node and continue this loop until there is no unmarked adjacent node. Then backtrack and check for other unmarked nodes and traverse them. Finally, print the nodes in the path.</p>
+          <h5>Algorithm: </h5>
+          <p>Create a recursive function that takes the index of the node and a visited array.</p>
+          <p>1. Mark the current node as visited and print the node.</p>
+          <p>2. Traverse all the adjacent and unmarked nodes and call the recursive function with the index of the adjacent node.</p>
+          <h5>Example:</h5>
+          <img src="./images/g1.png" class="img-fluid" alt="...">
+          <img src="./images/g2.png" class="img-fluid" alt="...">
+        </div>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
